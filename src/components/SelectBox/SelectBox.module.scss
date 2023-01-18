@@ -1,0 +1,24 @@
+﻿@import '../../static/stylesheets/lib/variables';
+@import '../../static/stylesheets/lib/mixin';
+@import '../../static/stylesheets/Root.scss';
+
+.container {
+    position: relative;
+    @include border2;
+    height: $input-height;
+    background-color: #fff;
+    select {
+        padding: 0 1rem;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        background-color: transparent;
+    }
+    svg {
+        position: absolute;
+        top: 0.6rem;
+        right: 0.3rem;
+        color: $gray2;
+        cursor: pointer;
+    }
+}

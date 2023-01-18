@@ -1,0 +1,25 @@
+﻿@import '../../static/stylesheets/lib/variables';
+@import '../../static/stylesheets/lib/mixin';
+@import '../../static/stylesheets/Root.scss';
+
+.container {
+    @include flexRow;
+    cursor: pointer;
+    svg {
+        background-color: #fff;
+        color: #fff;
+        width: 1.2rem;
+        height: 1.2rem;
+        margin-right: 0.25rem;
+        border: 1px solid $blue;
+        border-radius: 5px;
+    }
+    p {
+        @include text;
+    }
+    &.check {
+        svg {
+            background-color: $blue;
+        }
+    }
+}

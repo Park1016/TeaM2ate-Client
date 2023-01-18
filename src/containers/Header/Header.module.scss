@@ -1,0 +1,79 @@
+﻿@import '../../static/stylesheets/lib/variables';
+@import '../../static/stylesheets/lib/mixin';
+@import '../../static/stylesheets/Root.scss';
+
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    @include container;
+    margin-top: 0;
+    min-height: $header-height;
+    border-bottom: $border;
+    z-index: 100;
+}
+
+.content {
+    width: $pc-width;
+    @include flexRow;
+    justify-content: space-between;
+}
+
+.logo,
+.rightBtns {
+    width: 11rem;
+} 
+
+.logo {
+    @include flexRow;
+    justify-content: flex-start;
+}
+
+.icon {
+    @include icon;
+    padding: 0.5rem;
+    color: $gray1;
+    &.profile {
+
+    }
+}
+
+.rightBtns {
+    @include flexRow;
+    justify-content: end;
+    border-radius: none;
+    li {
+        position: relative;
+        @include flexRow;
+        margin-left: 0.5rem;
+    }
+    &.auth {
+        li > button {
+            border-radius: 50%;
+            overflow: hidden;
+        }
+    }
+}
+
+.iconBox {
+    width: auto;
+    height: auto;
+    @include flexRow;
+    :hover {
+        background-color: $gray6;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .content {
+        width: $res-width;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .logo,
+    .rightBtns {
+        width: auto;
+    } 
+}

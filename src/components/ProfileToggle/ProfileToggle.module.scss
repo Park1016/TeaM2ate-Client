@@ -1,0 +1,40 @@
+@import '../../static/stylesheets/lib/variables';
+@import '../../static/stylesheets/lib/mixin';
+@import '../../static/stylesheets/Root.scss';
+
+.container {
+    @include flexColumn;
+    @include border2;
+    width: 8.5rem;
+    height: auto;
+    position: absolute;
+    top: calc(#{$icon-height} + 1rem);
+    right: 0;
+    background-color: #fff;
+    box-shadow: $box-shadow;
+    div {
+        @include text;
+        @include flexRow;
+        justify-content: flex-start;
+        width: 80%;
+        height: 2.5rem;
+    }
+    div > svg {
+        width: 1.25rem;
+        height: 1.25rem;
+        color: $gray1;
+        margin-right: 0.5rem;
+    }
+    div:hover {
+        cursor: pointer;
+        svg ,p {
+            color: $blue;
+        }
+    }
+}
+
+.line {
+    width: 90%;
+    height: 1px;
+    background-color: $gray3;
+}

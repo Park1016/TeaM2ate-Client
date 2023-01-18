@@ -1,0 +1,46 @@
+@import '../../static/stylesheets/lib/variables';
+@import '../../static/stylesheets/lib/mixin';
+@import '../../static/stylesheets/Root.scss';
+
+.container {
+    position: fixed;
+    top: calc(50vh - 10rem);
+    left: calc(50vw - 7.5rem);
+    width: 15rem;
+    height: auto;
+    padding: 2rem 1rem;
+    background-color: #fff;
+    @include border2;
+    @include text;
+    border-radius: 0;
+    text-align: start;
+    box-shadow: $box-shadow;
+    z-index: 999;
+    li {
+        width: 100%;
+        margin-bottom: 1rem;
+        @include flexRow;
+    }
+    li:last-child {
+        padding-top: 1rem;
+        margin-bottom: 0;
+    }
+    li > p {
+        width: 40%;
+        margin-right: 0.125rem;
+    }
+    li > div {
+        width: 50%;
+        margin-left: 0.125rem;
+    }
+    li:last-child > div {
+        width: auto;
+    }
+}
+
+.buttons {
+    @include flexRow;
+    button {
+        margin: 0 0.125rem;
+    }
+}

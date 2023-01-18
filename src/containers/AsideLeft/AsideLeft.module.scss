@@ -1,0 +1,10 @@
+@import '../../static/stylesheets/lib/variables';
+@import '../../static/stylesheets/lib/mixin';
+@import '../../static/stylesheets/Root.scss';
+
+
+.container {
+    width: $side_width;
+    // background-color: blue;
+    border-right: $border;
+}

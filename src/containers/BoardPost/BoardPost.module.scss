@@ -1,0 +1,14 @@
+@import '../../static/stylesheets/lib/variables';
+@import '../../static/stylesheets/lib/mixin';
+@import '../../static/stylesheets/Root.scss';
+
+.box {
+    @include border2;
+    @include flexColumn;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 90%;
+    padding: 1rem 5%;
+    box-shadow: $box-shadow;
+    cursor: pointer;
+}

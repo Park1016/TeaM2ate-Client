@@ -1,0 +1,23 @@
+﻿@import '../../static/stylesheets/lib/variables';
+@import '../../static/stylesheets/lib/mixin';
+@import '../../static/stylesheets/Root.scss';
+
+.container {
+    @include flexRow;
+    margin-left: 1rem;
+}
+
+.content {
+    @include flexRow;
+    padding: 0.25rem 0.5rem;
+    @include border2;
+    margin-right: 0.5rem;
+    cursor: pointer;
+    svg {
+        margin-right: 0.25rem;
+        color: $gray1;
+    }
+    &.choose {
+        background-color: $gray6;
+    }
+}

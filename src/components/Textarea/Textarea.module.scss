@@ -1,0 +1,19 @@
+@import '../../static/stylesheets/lib/variables';
+@import '../../static/stylesheets/lib/mixin';
+@import '../../static/stylesheets/Root.scss';
+
+.textarea {
+    @include text;
+    @include border2;
+    text-align: start;
+    padding: 0.5rem;
+    width: calc(100% - 1rem - 2px);
+    height: 5rem;
+    resize: none;
+    &.readOnly {
+        padding: 0;
+        border: none;
+        height: auto;
+        caret-color: transparent;
+    }
+}

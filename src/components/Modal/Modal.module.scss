@@ -1,0 +1,27 @@
+@import '../../static/stylesheets/lib/variables';
+@import '../../static/stylesheets/lib/mixin';
+@import '../../static/stylesheets/Root.scss';
+
+.container {
+    @include modal;
+}
+
+.content {
+    @include modalWrap;
+    svg {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        background-color: #fff;
+    }
+    .content {
+        margin-top: 0;
+        width: calc(#{$pc} - 4rem);
+    }
+}

@@ -1,0 +1,127 @@
+﻿@import '../../static/stylesheets/lib/variables';
+@import '../../static/stylesheets/lib/mixin';
+@import '../../static/stylesheets/Root.scss';
+
+.container {
+    width: 25rem;
+    height: 100%;
+    background-color: #fff;
+    position: relative;
+    @include border2;
+    @include flexRow;
+    justify-content: flex-start;
+    &.focus {
+        border: 2px solid $blue;
+    }
+    svg {
+        @include icon;
+        cursor: pointer;
+    }
+}
+
+.iconBox {
+    display: none;
+}
+
+.inputBox {
+    width: 90%;
+    height: auto;
+    input {
+        border: none;
+        margin-top: 0;
+    }
+    input:focus {
+        border: none;
+    }
+}
+
+.resFind,
+.find {
+    color: $blue;
+    @include icon;
+}
+
+.find {
+    position: absolute;
+    top: calc(#{$input-height}/2 - #{$icon-height}/2);
+    right: 1rem;
+}
+
+.close {
+    display: none;
+    color: $gray1;
+}
+
+@media screen and (max-width: 860px) {
+    .container {
+        width: calc(#{$res-width} - 25rem);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        display: none;
+        &.search {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: $res-width;
+            padding: 0 1rem;
+            z-index: 101;
+            display: flex;
+            border: none;
+            .find {
+                top: calc(50% - #{$icon-height}/2);
+                right: 4.5rem;
+            }
+            .inputBox {
+                width: calc(100% - 2.5rem);
+                @include border2;
+                input {
+                    padding: 0 3rem 0 1rem;
+                    width: calc(100% - 4rem - 2px);
+                }
+            }
+            .close {
+                display: block;
+                position: absolute;
+                top: calc(50% - #{$icon-height}/2);
+                right: 1rem;
+            }
+        }
+    }
+    .iconBox {
+        width: auto;
+        position: absolute;
+        top: calc(#{$header-height}/2 - 1.1rem);
+        right: 12.5rem;
+        @include flexRow;
+        justify-content: end;
+        div {
+            width: $input-height;
+            height: $input-height;
+            @include flexRow;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        &.search {
+            display: none;
+        }
+        &.auth {
+            right: 7.2rem;
+            width: auto;
+            .resFind {
+                color: $gray1;
+                &:hover {
+                    color: $blue;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .iconBox {
+        right: 9.5rem;
+    }
+}

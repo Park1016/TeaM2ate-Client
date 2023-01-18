@@ -1,0 +1,12 @@
+@import '../../static/stylesheets/lib/variables';
+@import '../../static/stylesheets/lib/mixin';
+@import '../../static/stylesheets/Root.scss';
+
+.button {
+    @include flexRow;
+    svg {
+        @include icon;
+        color: $blue;
+        cursor: pointer;
+    }
+}

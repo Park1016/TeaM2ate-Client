@@ -1,0 +1,26 @@
+@import '../../static/stylesheets/lib/variables';
+@import '../../static/stylesheets/lib/mixin';
+@import '../../static/stylesheets/Root.scss';
+
+.container {
+    @include text;
+    @include input;
+    &::placeholder {
+        color: $text_gray4;
+    }
+    &:read-only {
+        background-color: $readOnly;
+        caret-color: transparent;
+    }
+    &:focus {
+        border: 1px solid $blue;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .container {
+        &::placeholder {
+            font-size: 0.9rem;
+        }
+    }
+}

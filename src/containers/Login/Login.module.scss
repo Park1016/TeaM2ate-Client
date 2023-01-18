@@ -1,0 +1,27 @@
+﻿@import '../../static/stylesheets/lib/variables';
+@import '../../static/stylesheets/lib/mixin';
+@import '../../static/stylesheets/Root.scss';
+
+.line {
+    width: 90%;
+    height: 3px;
+    background-color: $gray5;
+    margin-bottom: 1rem;
+}
+
+.bottom {
+    @include flexRow;
+    p {
+        margin: 0 0.5rem;
+        cursor: pointer;
+    }
+    p:first-child {
+        color: $red;
+    }
+    p:last-child {
+        color: $gray1;
+    }
+    p:hover {
+        font-weight: 600;
+    }
+}

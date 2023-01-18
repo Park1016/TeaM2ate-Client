@@ -1,0 +1,218 @@
+@import '../../static/stylesheets/lib/variables';
+@import '../../static/stylesheets/lib/mixin';
+@import '../../static/stylesheets/Root.scss';
+
+.container {
+    @include container;
+    @include text;
+    text-align: start;
+    align-items: flex-start;
+}
+
+.content {
+    @include spaceContent;
+}
+
+.user {
+    width: 100%;
+    @include flexColumn;
+    align-items: flex-start;
+}
+
+.userTop {
+    position: relative;
+    width: 100%;
+    @include flexRow;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    div {
+        @include flexRow;
+        ul {
+            li:first-child {
+                font-weight: 700;
+                font-size: 1.2rem;
+            }
+            li:last-child {
+                color: $gray1;
+            }
+        }
+    }
+}
+
+.introduce {
+    padding: 1rem;
+    width: calc(100% - 2rem);
+    @include border2;
+    border-radius: 0;
+}
+
+.tag {
+    width: 100%;
+    @include flexRow;
+    justify-content: flex-start;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+    li {
+        padding: 0 0.5rem;
+        margin: 0.25rem;
+        @include border2;
+    }
+}
+
+.filter {
+    @include flexRow;
+    margin-top: 2rem;
+    text-align: center;
+    border-bottom: 1px solid $gray2;
+}
+
+.filterList {
+    position: relative;
+    width: 7rem;
+    padding-bottom: 1rem;
+    cursor: pointer;
+    @include flexRow;
+    &.focus {
+        p, svg {
+            color: $blue;
+            font-weight: 600;
+        }
+        &::after {
+            @include after;
+        }
+    }
+    svg {
+        display: none;
+    }
+}
+
+.post {
+    width: 100%;
+    @include flexColumn;
+    margin-top: 1rem;
+    li {
+        width: 35rem;
+        @include flexRow;
+        justify-content: flex-start;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        border-bottom: $border;
+        p {
+            @include twoLineDots;
+            max-width: 27rem;
+            margin-right: 0.7rem;
+        }
+    }
+    li:last-child {
+        border-bottom: none;
+    }
+}
+
+.comment {
+    @include flexColumn;
+    margin-top: 1rem;
+    li {
+        @include flexColumn;
+        align-items: flex-start;
+        width: 35rem;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        border-bottom: $border;
+        p {
+            @include twoLineDots;
+            max-width: 27rem;
+            margin-right: 0.7rem;
+        }
+    }
+    li > div {
+        width: 100%;
+        @include flexRow;
+        justify-content: flex-start;
+    }
+    li:last-child {
+        border-bottom: none;
+    }
+}
+
+.postBox {
+    margin-top: 0.5rem;
+    p {
+        font-size: 0.9rem;
+        color: $text-gray4;
+    }
+}
+
+.noData {
+    width: 100%;
+    height: auto;
+    padding: 2rem 0;
+    background-color: $gray7;
+    @include flexColumn;
+    svg {
+        width: 3rem;
+        height: 3rem;
+        margin-bottom: 0.5rem;
+        color: $gray1;
+    }
+    p {
+        @include text;
+    }
+}
+
+.setting {
+    svg {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .post {
+        li {
+            width: calc(100% - 2rem);
+            p {
+                max-width: calc(100% - 6rem);
+            }
+        }
+    }
+    .comment {
+        li {
+            width: calc(100% - 2rem);
+            div{
+                p {
+                    max-width: calc(100% - 6rem);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .filterList {
+        width: 33.3%;
+    }
+    .setting {
+        button {
+            display: none;
+        }
+        svg {
+            position: absolute;
+            bottom: 0.5rem;
+            left: 3.3rem;
+            display: block;
+            @include icon;
+            color: $gray1;
+            cursor: pointer;
+        }
+    }
+    .filterList {
+        p {
+            display: none;
+        }
+        svg {
+            @include icon;
+            display: block;
+            color: $gray1;
+        }
+    }
+}

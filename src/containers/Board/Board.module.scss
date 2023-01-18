@@ -1,0 +1,46 @@
+﻿@import '../../static/stylesheets/lib/variables';
+@import '../../static/stylesheets/lib/mixin';
+@import '../../static/stylesheets/Root.scss';
+
+.article {
+    @include flexColumn;
+    @include content;
+    background-color: #fff;
+}
+
+.postWrap {
+    margin-top: 2rem;
+    display: grid;
+    grid-gap: 1.5rem;
+    grid-template-columns: repeat(2, 23rem);
+    > li:hover {
+        transform: scale(1.007);
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .postWrap {
+        grid-gap: 0.5rem;
+        grid-template-columns: repeat(2, 25vw);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .postWrap {
+        grid-gap: 1rem;
+        grid-template-columns: repeat(3, calc((#{$res-width} - 2rem)/3));
+    }
+}
+
+@media screen and (max-width: 830px) {
+    .postWrap {
+        grid-gap: 1rem;
+        grid-template-columns: repeat(2, calc((#{$res-width} - 1rem)/2));
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .postWrap {
+        grid-template-columns: repeat(1, #{$res-width});
+    }
+}

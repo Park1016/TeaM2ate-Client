@@ -1,0 +1,38 @@
+@import '../../static/stylesheets/lib/variables';
+@import '../../static/stylesheets/lib/mixin';
+@import '../../static/stylesheets/Root.scss';
+
+.container {
+    width: 100%;
+    @include flexColumn;
+    justify-content: flex-start;
+}
+
+.content {
+    width: 100%;
+    li {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+
+.title {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.top {
+    @include flexRow;
+    justify-content: flex-start;
+    div {
+        width: calc(100% - 6rem);
+    }
+}
+
+.buttons {
+    @include flexRow;
+    margin-top: 2rem;
+    button {
+        margin: 0 0.25rem;
+    }
+}

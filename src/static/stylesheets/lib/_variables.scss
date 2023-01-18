@@ -1,0 +1,50 @@
+// width
+$scroll-width: 10px;
+$icon-width: 1.5rem;
+$side-width: 11rem;
+// $pc: calc(100vw - #{$scroll-width});
+$pc: 100vw;
+$pc-width: 75rem;
+$content-width: 50rem;
+
+$res-width: calc(100vw - 2rem);
+$post-width: calc(100vw - 10rem);
+
+// height
+$header-height: 4rem;
+$footer-height: 18.5rem;
+$min-page-height: calc(100vh - #{$header-height});
+$input-height: 2.2rem;
+$icon-height: 1.5rem;
+
+// margin
+$content-margin-top: 1.5rem;
+
+// color
+$text_black: #181818;
+$text_gray1: #414141;
+$text_gray2: #848484;
+$text_gray3: #a1a1a1;
+$text_gray4: #c8c8c8;
+
+$gray1: #868e96;
+$gray2: #adb5bd;
+$gray3: #ced4da;
+$gray4: #dee2e6;
+$gray5: #e9ecef;
+$gray6: #f1f3f5;
+$gray7: #F7F7F7;
+
+$readOnly: #f5f6f8;
+
+$blue: #009ae6;
+$skyblue: #eff7fc;
+$red: #ff5d5d;
+$yellow: #FFA000;
+
+$hoverBlue: #0288c9;
+
+// etc
+$box-shadow: 3px 3px 5px $gray4;
+$border: 1px solid $gray3;
+

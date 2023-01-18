@@ -1,0 +1,18 @@
+@import '../../static/stylesheets/lib/variables';
+@import '../../static/stylesheets/lib/mixin';
+@import '../../static/stylesheets/Root.scss';
+
+.container {
+    width: 100%;
+    height: auto;
+    margin: 2rem 0 1.5rem 0;
+    @include flexColumn;
+    @include text;
+}
+
+.inputBox {
+    width: 100%;
+    @include flexColumn;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}

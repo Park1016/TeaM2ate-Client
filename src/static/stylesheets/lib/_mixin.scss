@@ -1,0 +1,152 @@
+@import './variables';
+
+
+@mixin flexRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flexColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin headerMargin {
+    margin-top: $header-height;
+}
+
+@mixin fixedFooter {
+    margin-top: $header-height;
+    min-height: calc(100vh - #{$footer-height} - #{$header-height});
+}
+
+@mixin oneLineDots {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+@mixin twoLineDots {
+    word-break: break-all;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+@mixin modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 999;
+    @include flexColumn;
+    justify-content: flex-start;
+}
+
+@mixin modalWrap {
+    position: relative;
+    width: 23rem;
+    height: auto;
+    background-color: #fff;
+    margin-top: $content-margin-top;
+    padding: 2rem;
+    @include flexColumn;
+    justify-content: flex-start;
+    border-radius: 5px;
+}
+
+@mixin container {
+    width: $pc;
+    margin-top: $header-height;
+    min-height: $min-page-height;
+    background-color: #fff;
+    @include flexRow;
+}
+
+@mixin content {
+    width: $content-width;
+    margin-top: $content-margin-top;
+    margin-bottom: 5rem;
+    z-index: 1;
+    @media screen and (max-width: 1250px) {
+        width: calc(#{$res-width} - #{$side-width}*2);
+    }
+    @media screen and (max-width: 1024px) {
+        width: $res-width;
+    }
+}
+
+@mixin spaceContent {
+    width: $content-width;
+    margin-top: $content-margin-top;
+    margin-bottom: 5rem;
+    z-index: 1;
+    @media screen and (max-width: 1250px) {
+        width: calc(#{$res-width} - #{$side-width}*2 - 2rem);
+    }
+    @media screen and (max-width: 1024px) {
+        width: $post-width;
+    }
+    @media screen and (max-width: 768px) {
+        width: calc(100vw - 10vw);
+    }
+}
+
+@mixin text {
+    font-family: Pretendard;
+    font-size: 1rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: $text_gray1;
+}
+
+
+@mixin border1 {
+    border: 1px solid $gray1;
+}
+
+@mixin border2 {
+    border: $border;
+    border-radius: 5px;
+}
+
+@mixin input {
+    width: calc(100% - 2rem - 2px);
+    height: $input-height;
+    padding: 0 1rem;
+    border: $border;
+    border-radius: 5px;
+    text-align: start;
+}
+
+@mixin icon {
+    width: $icon-width;
+    height: $icon-height;
+}
+
+@mixin borderBlue {
+    border: 1px solid $blue;
+}
+
+@mixin after {
+    content: "";
+    position: absolute;
+    bottom: -1.5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: $blue;
+}

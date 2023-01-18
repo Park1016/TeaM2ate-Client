@@ -1,0 +1,84 @@
+﻿@import '../../static/stylesheets/lib/variables';
+@import '../../static/stylesheets/lib/mixin';
+@import '../../static/stylesheets/Root.scss';
+
+.article {
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.top {
+    @include flexRow;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.topLeft {
+    @include flexRow;
+    > div {
+        @include flexRow;
+    }
+}
+
+.topRight {
+    @include flexRow;
+    > div {
+        margin-left: 0.5rem;
+    }
+}
+
+.name {
+    @include text;
+}
+
+.line {
+    width: 1px;
+    height: 1rem;
+    background-color: $gray3;
+    margin: 0 1rem;
+}
+
+.title {
+    width: 100%;
+    @include text;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    &.board {
+        @include twoLineDots;
+    }
+}
+
+.tag {
+    @include flexRow;
+    justify-content: flex-start;
+    p {
+        color: $gray1;
+        padding: 0.15rem 0.5rem;
+        margin: 0.25rem;
+        @include border2;
+        border-radius: 10px;
+        background-color: $gray7;
+    }
+}
+
+.editor {
+    margin: 1rem 0;
+    padding: 1rem 0;
+    border-top: $border;
+    border-bottom: $border;
+}
+
+.type {
+    padding: 1rem 0;
+    @include text;
+}
+
+.typeTitle {
+    text-align: start;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 320px) {
+}

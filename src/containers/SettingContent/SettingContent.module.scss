@@ -1,0 +1,63 @@
+@import '../../static/stylesheets/lib/variables';
+@import '../../static/stylesheets/lib/mixin';
+@import '../../static/stylesheets/Root.scss';
+
+.container {
+    @include container;
+    align-items: flex-start;
+}
+
+.content {
+    @include content;
+    @include flexRow;
+    align-items: flex-start;
+}
+
+.cate {
+    width: 7rem;
+    margin-right: 1rem;
+}
+
+.cateText {
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    &.focus {
+        background-color: $gray6;
+    }
+}
+
+.box {
+    width: calc(100% - 4rem - 7rem - 2rem);
+    padding: 0 2rem;
+    border-left: $border;
+}
+
+@media screen and (max-width: 768px) {
+    .content {
+        @include flexColumn;
+    }
+    .cate {
+        width: auto;
+        @include flexRow;
+    }
+    .cateText {
+        margin: 0;
+        position: relative;
+        &.focus {
+            background-color: transparent;
+            color: $blue;
+            font-weight: 600;
+            &::after {
+                @include after;
+            }
+        }
+    }
+    .box {
+        border-left: none;
+        border-top: $border;
+        padding: 1rem 0;
+        width: $res-width;
+    }
+}

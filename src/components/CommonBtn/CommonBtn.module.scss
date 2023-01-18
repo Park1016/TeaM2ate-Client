@@ -1,0 +1,47 @@
+@import '../../static/stylesheets/lib/variables';
+@import '../../static/stylesheets/lib/mixin';
+@import '../../static/stylesheets/Root.scss';
+
+.container {
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    cursor: pointer;
+    &.color {
+        a, p {
+            @include borderBlue;
+            background-color: $blue;
+            color: #fff;
+        }
+        a:hover,
+        p:hover {
+            background-color: $hoverBlue;
+        }
+    }
+    a, p {
+        @include border2;
+        @include text;
+        @include flexRow;
+        padding: 0 1rem;
+        min-width: 3rem;
+        width: auto;
+        height: $input-height;
+        background-color: #fff;
+        color: $text_gray2;
+    }
+    a:hover,
+    p:hover {
+        background-color: $gray6;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .container {
+        a, p {
+            min-width: 2rem;
+            padding: 0 0.5rem;
+            font-size: 0.9rem;
+        }
+    }
+
+}

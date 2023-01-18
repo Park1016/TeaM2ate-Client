@@ -1,0 +1,60 @@
+@import '../../static/stylesheets/lib/variables';
+@import '../../static/stylesheets/lib/mixin';
+@import '../../static/stylesheets/Root.scss';
+
+.content {
+    position: relative;
+    width: 100%;
+    @include flexColumn;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    // &.authNum {
+    //     input {
+    //         width: calc(100% - 6rem - 2px);
+    //         padding: 0 5rem 0 1rem;
+    //     }
+    // }
+}
+
+.inputBox {
+    width: 100%;
+    @include flexRow;
+    justify-content: flex-start;
+    input {
+        width: calc(100% - 8.6rem);
+    }
+}
+
+.timer {
+    position: absolute;
+    top: 1.9rem;
+    right: 7.5rem;
+}
+
+.button {
+    margin-left: 0.5rem;
+    width: 6rem;
+    height: $input-height;
+    background-color: #fff;
+    @include border2;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: $gray6;
+}
+
+@media screen and (max-width: 420px) {
+    .inputBox {
+        @include flexColumn;
+        input {
+            width: calc(100% - 2rem);
+        }
+        button {
+            margin: 0.5rem 0 0 0;
+        }
+    }
+    .timer {
+        right: 1rem;
+    }
+}

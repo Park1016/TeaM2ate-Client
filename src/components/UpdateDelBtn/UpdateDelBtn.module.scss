@@ -1,0 +1,56 @@
+﻿@import '../../static/stylesheets/lib/variables';
+@import '../../static/stylesheets/lib/mixin';
+@import '../../static/stylesheets/Root.scss';
+
+.container {
+    position: relative;
+    width: 1.5rem;
+    height: auto;
+}
+
+.button {
+    @include flexRow;
+    svg {
+        @include icon;
+        cursor: pointer;
+        color: $gray1;
+    }
+}
+
+.toggle {
+    position: absolute;
+    top:2rem;
+    right: 0;
+    @include border2;
+    background-color: #fff;
+    box-shadow: $box-shadow;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 10;
+    li {
+        @include flexRow;
+        @include text;
+        width: 5rem;
+        padding: 0.25rem 0;
+        text-align: center;
+        svg {
+            width: 1rem;
+            height: 1rem;
+            margin-right: 0.5rem;
+        }
+    }
+    li:first-child {
+        border-bottom: $border;
+        svg {
+            color: $gray1;
+        }
+    }
+    li:last-child {
+        svg {
+            color: $red;
+        }
+    }
+    li:hover {
+        color: $blue;
+    }
+}

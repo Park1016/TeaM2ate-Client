@@ -1,0 +1,116 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, button {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+/* article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+} */
+body {
+	overflow-x: hidden;
+	line-height: 1.5;
+	caret-color: transparent;
+}
+
+button {
+	background-color: transparent;
+	outline: none;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+input,
+textarea,
+select {
+	caret-color: #414141;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	outline: 0;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+	text-decoration: none;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background: #f1f3f4;
+    z-index: 99999;
+}
+::-webkit-scrollbar-thumb {
+    background: #ced4da;
+    /* border-radius: 5px; */
+    z-index: 99999;
+}
+
+
+/* editor */
+
+.toastui-editor-mode-switch {
+	display: none !important;
+}
+
+.toastui-editor-ww-container {
+	caret-color: #000;
+}
+
+.toastui-editor-dropdown-toolbar {
+	flex-wrap: wrap;
+	height: auto !important;
+}
+
+/* react-select */
+.css-3w2yfm-ValueContainer {
+	padding: 0.5rem !important;
+}
+
+/* 이미지 업로드 해결될때까지 임시 */
+.toastui-editor-toolbar-icons.image {
+	display: none !important;
+}
+
+/* 반응형 */
+@media screen and (max-width: 768px) {
+	::-webkit-scrollbar {
+		display: none;
+	}
+}

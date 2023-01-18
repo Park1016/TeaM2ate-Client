@@ -1,0 +1,18 @@
+﻿@import '../../static/stylesheets/lib/variables';
+@import '../../static/stylesheets/lib/mixin';
+@import '../../static/stylesheets/Root.scss';
+
+.icon {
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+    cursor: pointer;
+    svg {
+        width: 2rem;
+        height: 2rem;
+        color: $gray1;
+    }
+    :hover {
+        background-color: $gray6;
+    }
+}
