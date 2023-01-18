@@ -37,7 +37,7 @@ const SignUpForm = (props) => {
     const formData = new FormData();
     formData.append("url", form.url);
     const res = await new UserApi(http).photo(formData);
-    console.log(res);
+    // console.log(res);
   };
 
   const onSubmit = async (e) => {
