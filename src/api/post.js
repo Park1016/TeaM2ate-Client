@@ -76,4 +76,14 @@ export default class PostApi {
       console.log(error.response);
     }
   }
+
+  async getPostByBookmark(username) {
+    try {
+      const res = await this.post.get(`post/${username}`);
+      return res.data;
+    } catch (error) {
+      alert(error.response.data.message);
+      console.log(error.response);
+    }
+  }
 }

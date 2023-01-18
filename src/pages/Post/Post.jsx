@@ -31,6 +31,7 @@ const Post = (props) => {
   });
 
   useEffect(() => {
+    console.log(post);
     if (!post) {
       navigate("/");
     }
