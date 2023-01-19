@@ -8,14 +8,14 @@ export const httpSelector = selector({
   key: "httpSelector",
   get: async () => {
     try {
-      const data = await new UserApi().csrfToken();
+      // const data = await new UserApi().csrfToken();
       const http = {
         credentials: "include",
         withCredentials: true,
         headers: {
           "Content-Type": "multipart/form-data",
           Accept: "application/json",
-          "_csrf-token": data,
+          // "_csrf-token": data,
         },
       };
       return http;
