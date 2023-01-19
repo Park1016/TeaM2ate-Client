@@ -14,7 +14,7 @@ export default class UserApi {
       return res.data;
     } catch (error) {
       // alert(error.response.data.message);
-      alert(error.response.data.message);
+      console.warn(error.response.data.message);
     }
   }
 
@@ -135,9 +135,9 @@ export default class UserApi {
     }
   }
 
-  async getPostByBookmark(username) {
+  async getPostByBookmark(id) {
     try {
-      const res = await this.user.get(`post/${username}`);
+      const res = await this.user.get(`post/${id}`);
       return res.data;
     } catch (error) {
       alert(error.response.data.message);

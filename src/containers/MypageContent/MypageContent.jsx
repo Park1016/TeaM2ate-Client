@@ -40,7 +40,7 @@ const MypageContent = (props) => {
     return await new CommentApi(http).getPostByComment(user.username);
   });
   const { data: bookmark } = useQuery(["mypageBookmark"], async () => {
-    return await new UserApi(http).getPostByBookmark(user.username);
+    return await new UserApi(http).getPostByBookmark(user.id);
   });
 
   useEffect(() => {
